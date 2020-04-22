@@ -10,7 +10,6 @@ print('a is {0}, b is {1} and a times b is {2:.4f}'.format(a, b, a * b))
 language ='$Python$$'
 message = 'I love Python!'
  
-# YOUR CODE GOES HERE:
 language1 = language.strip('$')   #remove all leading and trailing $ signs
 language2 = language1.lower()     #lowercase version of language1 variable
 message1 = message.upper()        #uppercase version of message variable
