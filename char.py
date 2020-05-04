@@ -1,18 +1,16 @@
 
-def duplicate_encode(word):
-    count ={}
-    new_str = ""
-    for char in word.lower():
-        count.setdefault(char, 0)
-        count[char] += 1
-    for v in count.values():
-        if v == 1 :
-           new_str += "("
-        elif v > 1:
-            new_str += ")" 
-        else:
-            return 
-    print(new_str)   
+from collections import Counter
 
-duplicate_encode('din')
-duplicate_encode('Success')
+def duplicate_encode(word):
+    word = word.lower()
+    new_string = ''
+    count = Counter(word)
+    for x in word:
+        if count[x] == 1:
+            new_string += '('
+        else:
+            new_string += ')'
+    return new_string
+
+print(duplicate_encode('recede'))
+print(duplicate_encode('Success'))
